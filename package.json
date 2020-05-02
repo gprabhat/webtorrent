@@ -66,7 +66,8 @@
     "videostream": "^1.1.4",
     "windows-no-runnable": "0.0.6",
     "xtend": "^4.0.0",
-    "zero-fill": "^2.2.0"
+    "zero-fill": "^2.2.0",
+    "snyk": "^1.316.2"
   },
   "devDependencies": {
     "bittorrent-tracker": "^6.0.0",
@@ -111,6 +112,9 @@
     "test": "standard && node ./bin/test.js",
     "test-browser": "zuul -- test/basic.js",
     "test-browser-local": "zuul --local -- test/basic.js",
-    "test-node": "tape test/*.js"
-  }
+    "test-node": "tape test/*.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
